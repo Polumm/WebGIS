@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OpenLayers3示例</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 强制360浏览器用WebKit内核 -->
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <!-- 开源库jQuery -->
+    <script type="text/javascript" src="libs/jquery.js"></script>
+    <!-- 第三方插件库（复制功能插件） -->
+    <script type="text/javascript" src="libs/ZeroClipboard/ZeroClipboard.js"></script>
+    <!-- 源码编辑器样式文件与插件库 -->
+    <link type="text/css" rel="stylesheet" href="libs/codemirror/lib/codemirror.css" />
+    <script type="text/javascript" src="libs/codemirror/lib/codemirror.js"></script>   
+    <script type="text/javascript" src="libs/codemirror/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="libs/codemirror/mode/javascript/javascript.js"></script>
+    <script type="text/javascript" src="libs/codemirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="libs/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type="text/javascript" src="libs/codemirror/addon/edit/matchbrackets.js"></script>
+    <!-- 系统首页功能库 -->
+    <script type="text/javascript" src="js/init.js"></script>
+</head>
+<body >
+    <div id="header">
+      <a class="logo">
+        <!-- <img src="images/logo.png"/> -->
+        <span> </span>    
+      </a>
+
+    </div>
+    <div id="content">
+        <div class="leftsidebar_box">
+		    <div class="line"></div>
+		    <dl class="label">
+			    <dt>地图标注</dt>
+                <dd onclick="setCore('map','Labels')">聚合标注</dd>
+		    </dl>
+            <dl class="drawing">
+                <dt>图形绘制<img src="images/left/select_xl01.png"/></dt>
+                <dd onclick="setCore('DrawFeatures','Drawing')">绘制几何图形</dd>
+                <dd onclick="setCore('FeaturesStyle','Drawing')">图形样式编辑</dd>
+                <dd onclick="setCore('ModifyFeatures','Drawing')">图形交互编辑</dd>
+                <dd onclick="setCore('SaveFeatures','Drawing')">图形信息保存</dd>
+            </dl>
+	    </div>
+
+        <div id="code_wrapper">
+            <div id="code_arrow" class="go_back">
+                <span title="显示代码">›</span>
+                <p title="隐藏代码">‹</p>
+            </div>
+            <div id="code_core">
+                <div class="code_head">
+<!--                	<a id="code_restore" href="javascript:void(0);">还原</a>
+				    <a id="code_run" href="javascript:void(0);">运行</a>-->
+                    <a id="code_copy" class="" href="javascript:void(0);">复制</a>
+                    源代码编辑器
+                </div>
+                <div class="code_body">
+                    <textarea id="codes" rows="10" cols="30" name="codes" > </textarea>
+                </div>
+            </div>
+
+        </div>
+        <div  class="iframe_wrapper" >
+            <iframe id="container_iframe" name="container_iframe"  scrolling="no" ></iframe>
+        </div>
+    </div>
+</body>
+</html>
